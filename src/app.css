@@ -1,0 +1,40 @@
+.pane {
+    -fx-background-color: #333;
+}
+
+.button {
+    -fx-background-color: rgb(3, 16, 19), rgb(21, 180, 204), rgb(21, 180, 204);
+    -fx-background-radius: 20px;
+    -fx-text-fill: #fff;
+    -fx-font-size: 16;
+}
+
+.button:hover {
+    -fx-background-color: rgb(222, 229, 231), rgb(215, 223, 224), rgb(225, 233, 234);
+    -fx-text-fill: #222;
+}
+
+.label {
+    -fx-text-fill: #fff;
+    -fx-font-family: "Monospace";
+    -fx-font-size: 16;
+}
+
+.textfield {
+    -fx-background-radius: 10px;
+    -fx-background-color: #fff;
+}
+
+.checkbox {
+    -fx-text-fill: #fff;
+    -fx-font-size: 16;
+}
+
+.link {
+    -fx-font-size: 16;
+    -fx-text-fill: rgb(20, 160, 179);
+}
+
+.link:hover {
+    -fx-text-fill: rgb(24, 208, 48);
+}
