@@ -24,7 +24,8 @@ public class Login extends Stage {
     private TextField login;
     private PasswordField pass;
     private CheckBox checkBox;
-    private Hyperlink hplink;
+    public static Hyperlink hplink = new Hyperlink("Projeto no GitHub");
+
 
     public Login(){
         setHierarchy();
@@ -41,7 +42,9 @@ public class Login extends Stage {
         hbox = new HBox();
         hbox2 = new HBox();
         img = new ImageView(getClass().getResource("logo.png").toString());
-        hplink = new Hyperlink("Projeto no GitHub");
+
+
+
         label1 = new Label("Usuario ");
         label2 = new Label("Senha ");
         login = new TextField();

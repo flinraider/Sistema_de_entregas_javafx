@@ -17,6 +17,11 @@ public class App extends Application {
         viewLogin = new Login();
         viewLogin.setTitle("Sistema de Entregas");
         viewLogin.show();
+
+        Login.hplink.setOnAction( e -> {
+            getHostServices().showDocument("https://github.com/flinraider/Sistema_de_entregas_javafx");
+            
+         });
         
     }
 
