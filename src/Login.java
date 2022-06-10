@@ -1,7 +1,5 @@
-import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Hyperlink;
@@ -12,14 +10,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.geometry.Pos;
 
-
-public class App extends Application {
-
-    private Stage stage;
-    private Principal principal;
-    private Scene scene;
+public class Login extends Stage {
+    
     private Pane pane;
+    private Scene scene;
     private ImageView img;
     private HBox hbox, hbox2;
     private VBox vbox;
@@ -30,27 +26,14 @@ public class App extends Application {
     private CheckBox checkBox;
     private Hyperlink hplink;
 
-
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-       
-        stage = primaryStage;
-        
-        stage.setTitle("Sistema de Entregas");
+    public Login(){
+        setTitle("Sistema de Entrega");
         setHierarchy();
         drawWidgets();
-        stage.setScene( scene );
-        stage.setResizable( false );
-        stage.show();
-        
-        
+        setScene( scene );
+        setResizable( false );
+        show();
     }
-
-
-    public static void main(String[] args) throws Exception {
-        launch(args);
-    }
-
 
     private void setHierarchy(){
 
@@ -62,7 +45,8 @@ public class App extends Application {
         hplink = new Hyperlink("Projeto no GitHub");
 
         hplink.setOnAction( e -> {
-            getHostServices().showDocument("https://github.com/flinraider");
+            //getHostServices().showDocument("https://github.com/flinraider");
+            
          });
 
         label1 = new Label("Usuario ");
@@ -73,8 +57,6 @@ public class App extends Application {
         button = new Button("Entrar");
         
         button.setOnAction( e -> {
-            stage.close();
-            principal = new Principal();
                
         });
 
@@ -140,4 +122,5 @@ public class App extends Application {
         hplink.getStyleClass().add("link");
 
     }
+
 }
