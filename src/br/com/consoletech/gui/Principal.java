@@ -1,3 +1,4 @@
+package br.com.consoletech.gui;
 
 import javafx.scene.Scene;
 import javafx.scene.control.Menu;

@@ -1,3 +1,4 @@
+package br.com.consoletech.gui;
 
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -29,10 +30,12 @@ public class Login extends Stage {
 
 
     public Login(){
+        setTitle("Entregas");
         setHierarchy();
         drawWidgets();
         setScene( scene );
         setResizable( false );
+        show();
 
     }
 
@@ -42,7 +45,7 @@ public class Login extends Stage {
         vbox = new VBox();
         hbox = new HBox();
         hbox2 = new HBox();
-        img = new ImageView(getClass().getResource("logo.png").toString());
+        img = new ImageView(getClass().getResource("logo_ent.png").toString());
 
 
 
@@ -75,9 +78,10 @@ public class Login extends Stage {
 
         pane.getStyleClass().add("pane");
 
-        img.setX(200);
-        img.setFitHeight(220);
-        img.setFitWidth(220);
+        img.setX(130);
+        img.setY(-70);
+        img.setFitHeight(350);
+        img.setFitWidth(350);
 
         vbox.setAlignment(Pos.CENTER_LEFT);
         vbox.setSpacing( 5 );
