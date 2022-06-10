@@ -27,12 +27,11 @@ public class Login extends Stage {
     private Hyperlink hplink;
 
     public Login(){
-        setTitle("Sistema de Entrega");
         setHierarchy();
         drawWidgets();
         setScene( scene );
         setResizable( false );
-        show();
+
     }
 
     private void setHierarchy(){
@@ -43,12 +42,6 @@ public class Login extends Stage {
         hbox2 = new HBox();
         img = new ImageView(getClass().getResource("logo.png").toString());
         hplink = new Hyperlink("Projeto no GitHub");
-
-        hplink.setOnAction( e -> {
-            //getHostServices().showDocument("https://github.com/flinraider");
-            
-         });
-
         label1 = new Label("Usuario ");
         label2 = new Label("Senha ");
         login = new TextField();
@@ -57,7 +50,8 @@ public class Login extends Stage {
         button = new Button("Entrar");
         
         button.setOnAction( e -> {
-               
+               close();
+               Principal principal = new Principal();
         });
 
         vbox.getChildren().addAll( label1, login, label2, pass, hbox, hbox2 );
