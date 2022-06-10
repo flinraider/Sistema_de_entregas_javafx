@@ -3,7 +3,7 @@
 }
 
 .button {
-    -fx-background-color: rgb(3, 16, 19), rgb(233, 190, 14), rgb(235, 188, 34);
+    -fx-background-color: rgb(203, 173, 8), rgb(233, 190, 14), rgb(235, 188, 34);
     -fx-background-radius: 20px;
     -fx-text-fill: #fff;
     -fx-font-size: 16;

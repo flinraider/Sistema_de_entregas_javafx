@@ -1,6 +1,7 @@
 package br.com.consoletech.gui;
 
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -22,7 +23,7 @@ public class Login extends Stage {
     private HBox hbox, hbox2;
     private VBox vbox;
     private Label label1, label2;
-    private Button button;
+    private Button button, sair;
     private TextField login;
     private PasswordField pass;
     private CheckBox checkBox;
@@ -31,6 +32,7 @@ public class Login extends Stage {
 
     public Login(){
         setTitle("Entregas");
+        initStyle(StageStyle.UNDECORATED);
         setHierarchy();
         drawWidgets();
         setScene( scene );
@@ -42,6 +44,12 @@ public class Login extends Stage {
     private void setHierarchy(){
 
         pane = new Pane();
+        sair =  new Button("X");
+
+        sair.setOnAction( e -> {
+            System.exit(0);
+        });
+
         vbox = new VBox();
         hbox = new HBox();
         hbox2 = new HBox();
@@ -64,7 +72,7 @@ public class Login extends Stage {
         vbox.getChildren().addAll( label1, login, label2, pass, hbox, hbox2 );
         hbox.getChildren().addAll( button, checkBox );
         hbox2.getChildren().add( hplink );
-        pane.getChildren().addAll(  img, vbox );
+        pane.getChildren().addAll(  sair, img, vbox );
         
         //css
         String pathCss = getClass().getResource("login.css").toExternalForm();
@@ -117,6 +125,9 @@ public class Login extends Stage {
         button.setLayoutY( 240 );
         button.setPrefSize( 90, 50 );
         button.getStyleClass().add("button");
+
+        sair.setLayoutX( 540 );
+        sair.setLayoutY( 20 );
 
         checkBox.setPrefSize(150, 70);
         checkBox.getStyleClass().add("checkbox");
