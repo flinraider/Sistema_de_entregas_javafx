@@ -1,0 +1,11 @@
+.menubar {
+    -fx-background-color: rgb(92, 229, 239);
+}
+
+.menuitem .label{
+    -fx-text-fill: #222;
+}
+
+.menu .label {
+
+}

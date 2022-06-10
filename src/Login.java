@@ -1,3 +1,4 @@
+
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -63,7 +64,7 @@ public class Login extends Stage {
         pane.getChildren().addAll(  img, vbox );
         
         //css
-        String pathCss = getClass().getResource("app.css").toExternalForm();
+        String pathCss = getClass().getResource("login.css").toExternalForm();
         scene = new Scene( pane, 600, 440 );
         //add css in scene
         scene.getStylesheets().add(pathCss);
