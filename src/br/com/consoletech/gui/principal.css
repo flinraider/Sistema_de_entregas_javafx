@@ -1,12 +1,17 @@
 
 .menubar {
-    -fx-background-color: rgb(239, 191, 34);
+    -fx-background-color: rgb(239, 191, 34), rgb(239, 191, 34), rgb(239, 191, 34);
 }
 
 .menuitem .label{
     -fx-text-fill: #222;
 }
 
-.menu .label {
-
+.menu:hover {
+    -fx-background-color: rgb(149, 117, 11);
 }
+
+.menu .label {
+    -fx-font-size: 20px;
+}
+

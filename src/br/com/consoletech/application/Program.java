@@ -1,5 +1,6 @@
 package br.com.consoletech.application;
 
+import br.com.consoletech.db.Firebird;
 import br.com.consoletech.gui.Login;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -11,6 +12,7 @@ public class Program extends Application{
         try {
 
             stage = new Login();
+            Firebird.getConnection();
             
         } catch (Exception e) {
            System.out.println("Error: "+e.getMessage());

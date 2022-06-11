@@ -29,7 +29,7 @@ public class Principal extends Stage {
         });
 
         setHierarchy();
-        setResizable( true );
+        setResizable( false );
         setScene( scene );
         show();
     }
@@ -40,11 +40,10 @@ public class Principal extends Stage {
 
         menuBar.getStyleClass().add("menubar");
         menuBar.getMenus().add( menu );
-        menuBar.setPrefSize( 100, 40);
+        menuBar.setPrefSize( 100, 50);
 
         menu.getItems().addAll( menuItem, menuItem2 );
         menu.getStyleClass().add("menu");
-        
 
         menuItem.getStyleClass().add("menuitem");
         menuItem2.getStyleClass().add("menuitem");
